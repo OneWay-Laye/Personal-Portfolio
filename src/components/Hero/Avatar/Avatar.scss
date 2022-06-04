@@ -1,0 +1,11 @@
+#heroAvatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  border-radius: 60%;
+  border: 3px solid green;
+  height: 50%
+}

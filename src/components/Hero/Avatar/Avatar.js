@@ -1,7 +1,9 @@
+import './Avatar.scss'
+
 function Avatar() {
   return(
-    <div>
-      <h3>this is the Avatar</h3>
+    <div id='heroAvatar'>
+      <img src='https://www.medianama.com/wp-content/uploads/2018/04/Facebook-shadow.jpg.jpg'/>
     </div>
   )
 }
