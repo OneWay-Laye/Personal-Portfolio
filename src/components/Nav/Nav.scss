@@ -1,5 +1,20 @@
 #mainNav {
-  color: green;
+  background-color: green;
+  color: white;
 
-  
+  & ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px;
+
+    & li {
+
+      & a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
 }
