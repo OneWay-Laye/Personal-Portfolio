@@ -1,9 +1,12 @@
 #contactContainer{
   padding: 10px;
+  display: flex;
+  justify-content: space-around;
 
   & #contactCard {
-  background-color: #ECEDF1;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: #ECEDF1;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 50%;
 
     & #contactForm {
       display: flex;
@@ -26,6 +29,35 @@
         align-self: center;
         padding: 12px 20px;
         margin: 15px 15px;
+      }
+    }
+  }
+
+  & #contactSocial {
+
+    & div{
+      height:80%
+    }
+
+    & a {
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      height: 25%;
+      filter: grayscale(100%);
+      text-decoration: none;
+
+      &:hover {
+        filter: grayscale(0%);
+        color: white;
+      }
+
+      & img {
+        height: 4rem;
+      }
+
+      & p {
+        margin: 15px
       }
     }
   }
