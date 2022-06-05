@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: #3a3b3e;
+  box-sizing: inherit;
 }
 
 .App-logo {
