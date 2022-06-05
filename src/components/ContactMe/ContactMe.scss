@@ -1,0 +1,32 @@
+#contactContainer{
+  padding: 10px;
+
+  & #contactCard {
+  background-color: #ECEDF1;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+    & #contactForm {
+      display: flex;
+      flex-direction: column;
+
+      & label {
+        text-align: left;
+        font-size: larger;
+        margin: 15px 15px;
+        padding: 0px 4px;
+      }
+
+      & input {
+        margin: 0 15px;
+        padding: 12px 20px;
+      }
+
+      & button {
+        width: 50%;
+        align-self: center;
+        padding: 12px 20px;
+        margin: 15px 15px;
+      }
+    }
+  }
+}
