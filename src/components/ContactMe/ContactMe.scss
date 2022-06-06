@@ -6,7 +6,7 @@
   & #contactCard {
     background-color: #ECEDF1;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    width: 50%;
+    width: 100%;
 
     & #contactForm {
       display: flex;
@@ -34,6 +34,7 @@
   }
 
   & #contactSocial {
+    width: 100%;
 
     & div{
       height:80%
