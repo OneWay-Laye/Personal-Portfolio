@@ -1,0 +1,28 @@
+#projectSection {
+
+
+  & #cardHolder {
+      display: flex;
+
+      & .projectCard {
+        width: 33%;
+        margin: 0px 10px;
+        Border: 2px solid Blue;
+
+        & img {
+          width: 95%;
+          padding-top: 8px;
+      }
+
+        & a {
+          text-decoration: none;
+          color: black;
+        }
+
+        & button {
+          padding: 8px;
+          margin: 0 10px 10px 0 ;
+        }
+    }
+  }
+}

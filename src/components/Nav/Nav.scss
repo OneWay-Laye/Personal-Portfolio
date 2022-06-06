@@ -1,5 +1,5 @@
 #mainNav {
-  background-color: green;
+  background-color: #33B1FA;
   color: white;
 
   & ul {
@@ -7,13 +7,25 @@
   justify-content: space-around;
   list-style-type: none;
   margin: 0;
-  padding: 15px;
+  padding: 0;
 
     & li {
-
+      width: 25%;
+      height: 100%;
       & a {
+        display: block;
         color: white;
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
+
+        &:hover{
+          background-color: #4385BF;
+        }
+
+        &:active{
+          background-color: #09073F;
+        }
       }
     }
   }
