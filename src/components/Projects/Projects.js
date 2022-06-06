@@ -21,14 +21,22 @@ function Projects() {
         pictureLink: 'https://i.imgur.com/jOyr2Lw.png'
       }
     ]
-  let projectsJsx = ''
+  let projectsJsx = projects.map(project => (
+    <div className="projectCard">
+      <img src={project.pictureLink}/>
+      <h4>{project.name}</h4>
+      <button><a href={project.webLink}>Website Link</a></button>
+      <button><a href={project.repoLink}>Repo Link</a></button>
+    </div>
+  ))
 
 
 
   return(
-    <div>
-      {projectsJsx}
-      {console.log(projects)}
+    <div id="projectSection">
+      <h2>View My Projects</h2>
+      <div id="cardHolder">{projectsJsx}</div>
+
     </div>
   )
 }
