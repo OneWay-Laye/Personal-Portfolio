@@ -1,6 +1,11 @@
 #mainNav {
   background-color: #33B1FA;
   color: white;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+  margin-bottom: 10px;
 
   & ul {
   display: flex;
