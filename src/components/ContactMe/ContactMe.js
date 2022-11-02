@@ -40,8 +40,7 @@ function ContactMe() {
             value={firstName}
             onChange= {(e) => setFirstName(e.target.value)}
           />
-          {console.log(firstName, lastName, email, message)}
-
+          
           <label>Last name</label>
           <input
             name={"lastName"}
