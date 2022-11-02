@@ -1,26 +1,49 @@
 import './ContactMe.scss'
-import { useState} from "react"
+import { useState, useRef } from "react"
+import emailjs from '@emailjs/browser';
 
 function ContactMe() {
   const [email, setEmail] = useState('')
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName] = useState('')
   const [message, setMessage] = useState('')
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_hzwzmt2', 'template_carejv7', form.current, 'H6SSIEy_WdJGgTNtn')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      setFirstName('')
+      setLastName('')
+      setEmail('')
+      setMessage('')
+  }
 
   return(
     <div id="contactContainer">
       <section id="contactCard">
       <h2>Connect With Me!</h2>
-        <form id='contactForm'>
+        <form
+          ref={form}
+          id='contactForm'
+          onSubmit={sendEmail}
+          >
           <label>First name</label>
           <input
+            name={"firstName"}
             placeholder="Enter your first name"
             value={firstName}
             onChange= {(e) => setFirstName(e.target.value)}
           />
-
+          
           <label>Last name</label>
           <input
+            name={"lastName"}
             placeholder="Enter your last name"
             value={lastName}
             onChange = {(e) => setLastName(e.target.value)}
@@ -28,6 +51,7 @@ function ContactMe() {
 
           <label>Email</label>
           <input
+            name={"email"}
             type='email'
             placeholder="Enter your email"
             value={email}
@@ -36,6 +60,7 @@ function ContactMe() {
 
           <label>Message</label>
           <input
+            name={"message"}
             placeholder="Enter the message"
             value={message}
             onChange = {(e) => setMessage(e.target.value)}
