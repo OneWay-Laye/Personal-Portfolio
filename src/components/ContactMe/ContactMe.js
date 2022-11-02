@@ -1,6 +1,12 @@
 import './ContactMe.scss'
+import { useState} from "react"
 
 function ContactMe() {
+  const [email, setEmail] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [message, setMessage] = useState('')
+
   return(
     <div id="contactContainer">
       <section id="contactCard">
@@ -9,24 +15,31 @@ function ContactMe() {
           <label>First name</label>
           <input
             placeholder="Enter your first name"
+            value={firstName}
+            onChange= {(e) => setFirstName(e.target.value)}
           />
 
           <label>Last name</label>
           <input
             placeholder="Enter your last name"
+            value={lastName}
+            onChange = {(e) => setLastName(e.target.value)}
           />
 
           <label>Email</label>
           <input
             type='email'
             placeholder="Enter your email"
+            value={email}
+            onChange = {(e) => setEmail(e.target.value)}
           />
 
           <label>Message</label>
           <input
             placeholder="Enter the message"
+            value={message}
+            onChange = {(e) => setMessage(e.target.value)}
           />
-
           <button>Send Message</button>
         </form>
       </section>
