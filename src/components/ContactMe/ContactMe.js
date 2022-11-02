@@ -18,7 +18,10 @@ function ContactMe() {
       }, (error) => {
           console.log(error.text);
       });
-      e.target.reset()
+      setFirstName('')
+      setLastName('')
+      setEmail('')
+      setMessage('')
   }
 
   return(
